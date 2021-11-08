@@ -25,8 +25,8 @@ Route::group([
     Route::post('/login', [UserController::class, 'login'])->name('login');
     Route::post('/resendotp', [UserController::class, 'resendOtp'])->name('resendotp');
     Route::post('/verifyotp', [UserController::class, 'verifyOtp'])->name('verifyotp');
-    Route::post('/updateprofile', [UserController::class, 'updateProfile']);
     Route::middleware(['auth:sanctum'])->group(function () {
+        Route::post('/updateprofile', [UserController::class, 'updateProfile']);
         Route::get('/getprofile',[UserController::class,'getProfile']);
         Route::get('/userlist', [UserController::class, 'userList']);
     });

@@ -109,7 +109,7 @@ class UserController extends BaseController
     }
 
     public function updateProfile(Request $request){
-        $user_id = Auth::id();
+        $user_id = Auth::user();
         $validator = Validator::make($request->all(), [ 
             'name' => 'required',
             'email' => 'required|email|unique:users,email,' . $user_id,
