@@ -13,7 +13,6 @@ use App\Http\Controllers\API\V1\UserController;
 | routes are loaded by the RouteServiceProvider within a group which
 | is assigned the "api" middleware group. Enjoy building your API!
 |
-
 */
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
